@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  font-size: 36px;
+  text-align: center;
+  padding: 20px;
+}
+
+.user-name {
+  color: white;
+  padding: 5px;
+}
+
+.active {
+  background-color: rgb(139, 148, 148);
+}
+
+.btn-login {
+  background-color: blue;
+}
+
+main {
+  padding: 50px;
+}
