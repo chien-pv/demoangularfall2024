@@ -1,4 +1,11 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  DoCheck,
+  OnChanges,
+  OnDestroy,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 import { NewsletterComponent } from '../newsletter/newsletter.component';
 import { ProductHotsComponent } from '../product-hots/product-hots.component';
 import { ProductTrendsComponent } from '../product-trends/product-trends.component';
@@ -18,4 +25,10 @@ import { StatisticComponent } from '../statistic/statistic.component';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent {}
+export class HomeComponent {
+  name: String = 'Nguyen Van A';
+
+  handleClick() {
+    this.name = 'sfksdfkdfhkd';
+  }
+}
