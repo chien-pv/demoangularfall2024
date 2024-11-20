@@ -25,3 +25,7 @@ h1 {
 main {
   padding: 50px;
 }
+
+.errors {
+  border-color: red;
+}
