@@ -16,7 +16,7 @@ import { NgForm } from '@angular/forms';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   formLoginGroup: FormGroup = new FormGroup({
     emailControl: new FormControl(null, [
       Validators.required,
@@ -27,15 +27,6 @@ export class LoginComponent implements OnInit {
 
   get loginFormControl() {
     return this.formLoginGroup.controls;
-  }
-  ngOnInit(): void {
-    this.formLoginGroup = new FormGroup({
-      emailControl: new FormControl(null, [
-        Validators.required,
-        Validators.minLength(5),
-      ]),
-      passwordControl: new FormControl(null),
-    });
   }
   login() {
     console.log(this.formLoginGroup.value);
