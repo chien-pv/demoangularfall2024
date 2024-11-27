@@ -12,12 +12,13 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { RootComponent } from './root/root.component';
 import { AdminComponent } from './admin/admin.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { UsersComponent } from './users/users.component';
 
 const canActivateLogin: CanActivateFn = (
   route: ActivatedRouteSnapshot,
   state: RouterStateSnapshot
 ) => {
-  return false;
+  return true;
 };
 
 export const routes: Routes = [
@@ -42,7 +43,10 @@ export const routes: Routes = [
     path: 'admin',
     component: AdminComponent,
     pathMatch: 'prefix',
-    children: [{ path: 'products', component: ProductsComponent }],
+    children: [
+      { path: 'products', component: ProductsComponent },
+      { path: 'users', component: UsersComponent },
+    ],
   },
   { path: '**', component: PageNotFoundComponent },
 ];

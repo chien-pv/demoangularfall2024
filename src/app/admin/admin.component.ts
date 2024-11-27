@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 
-declare function adminjs(): any;
-
 @Component({
   selector: 'app-admin',
   standalone: true,
@@ -12,7 +10,5 @@ declare function adminjs(): any;
   styleUrl: './admin.component.css',
 })
 export class AdminComponent implements OnInit {
-  ngOnInit(): void {
-    adminjs();
-  }
+  ngOnInit(): void {}
 }
